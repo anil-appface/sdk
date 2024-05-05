@@ -22,7 +22,7 @@ package sdk_test
 import (
 	"testing"
 
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 func TestAddTags(t *testing.T) {

@@ -536,6 +536,14 @@ type (
 	}
 )
 
+type AzureLogAnalytics struct {
+	DashboardTime bool     `json:"dashboardTime"`
+	Query         string   `json:"query"`
+	ResultFormat  string   `json:"resultFormat"`
+	Resources     []string `json:"resources"`
+	TimeColumn    string   `json:"timeColumn"`
+}
+
 // for an any panel
 type Target struct {
 	RefID      string         `json:"refId"`
@@ -597,6 +605,9 @@ type Target struct {
 			Size        string      `json:"size,omitempty"`
 		} `json:"settings"`
 	} `json:"bucketAggs,omitempty"`
+
+	// For AzureLogAnalytics
+	AzureLogAnalytics AzureLogAnalytics `json:"azureLogAnalytics"`
 
 	// For Graphite
 	Target string `json:"target,omitempty"`
